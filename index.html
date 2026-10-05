@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Icon | Full-Stack Developer</title>
-<meta name="description" content="4 years of experience with Luau. Building the systems behind Roblox games.">
+<title>Icon | Roblox Developer</title>
+<meta name="description" content="4 years of experience with Luau. I build reliable, modular systems that power Roblox games.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'></text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +27,7 @@ header{position:sticky;top:0;z-index:5;background:rgba(7,10,20,.65);backdrop-fil
 header .wrap{display:flex;align-items:center;gap:1.5rem;height:3.6rem}
 .logo{font-weight:800;text-decoration:none;margin-right:auto;letter-spacing:-.02em}
 nav{display:flex;gap:1.4rem}
-nav a{text-decoration:none;color:var(--muted);font-size:.88rem;transition:color .2s,text-shadow .2s}
+nav a{text-decoration:none;color:var(--muted);font-size:.88rem;transition:color .2s,text-shadow .2s, text-decoration-color .2s}nav a:hover{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
 nav a:hover{color:var(--ink);text-shadow:0 0 14px rgba(124,92,255,.9)}
 .btn{display:inline-flex;align-items:center;gap:.4rem;padding:.45rem .95rem;border-radius:999px;background:#eef2ff;color:#0b1020;font:600 .82rem var(--sans);text-decoration:none;border:0;cursor:pointer;transition:box-shadow .25s,transform .25s}
 .btn:hover{box-shadow:var(--glow);transform:translateY(-1px)}
@@ -77,7 +77,7 @@ h2{font-size:clamp(1.7rem,3.4vw,2.4rem);line-height:1.15;letter-spacing:-.03em;m
 .steps{list-style:none;margin:0;padding:0;counter-reset:s;display:grid;gap:.7rem;max-width:44rem}
 .steps li{counter-increment:s;display:grid;grid-template-columns:2.6rem 1fr;align-items:center;padding:1rem 1.2rem;background:var(--panel);border:1px solid var(--line);border-radius:.9rem;transition:box-shadow .25s,border-color .25s}
 .steps li:hover{box-shadow:var(--glow);border-color:transparent}
-.steps code{font:400 .85em var(--mono);background:rgba(255,255,255,.08);padding:.1em .4em;border-radius:.3em}
+.steps code{font:400 .85em var(--mono);background:rgba(255,255,255,.08);padding:.1em .4em;border-radius:.3em}.steps strong{display:inline-block;margin-bottom:.1rem}
 .steps li::before{content:counter(s);font:500 .9rem var(--mono);color:var(--b)}
 .faq{max-width:46rem;display:grid;gap:.7rem}
 details{background:var(--panel);border:1px solid var(--line);border-radius:.9rem;padding:1rem 1.2rem;transition:box-shadow .25s,border-color .25s}
@@ -112,11 +112,11 @@ dialog video{display:block;width:100%;max-height:70vh;background:#000}
 <body>
 <header>
   <div class="wrap">
-    <a class="logo" href="#top">Icon's Portfolio</a>
+    <a class="logo" href="#top">Icon | Roblox Developer</a>
     <nav>
       <a href="#works">Work</a>
-      <a href="#stack">What I do</a>
-      <a href="#payment">Payment</a>
+      <a href="#stack">Services</a>
+      <a href="#process">Process</a>
       <a href="#faq">FAQ</a>
     </nav>
     <a class="btn discord" href="https://discord.com/users/690302146524348436">Discord</a>
@@ -128,8 +128,8 @@ dialog video{display:block;width:100%;max-height:70vh;background:#000}
     <div class="wrap">
       <div>
         <p class="status">Taking commissions</p>
-        <h1>Hi, I'm Icon. I script the <em>systems behind Roblox games</em></h1>
-        <p class="lede">I write Luau for the parts players feel but never see: rounds, shops, rewards, saving and shooters. I keep the important logic on the server and the code easy to read, so the next person can pick it up.</p>
+        <h1>Hi, I'm Icon. I build the <em>systems behind Roblox games</em></h1>
+        <p class="lede">4 years of experience with Luau. I build reliable, modular systems that are designed to be easy to maintain and expand.</p>
         <div class="actions">
           <a class="btn" href="#works">See my work</a>
           <a class="btn discord" href="https://discord.com/users/690302146524348436">Message on Discord</a>
@@ -137,7 +137,7 @@ dialog video{display:block;width:100%;max-height:70vh;background:#000}
         <ul class="stats">
           <li><b>4 years</b><span>scripting in Studio</span></li>
           <li><b>Luau</b><span>modular, server-first</span></li>
-          <li><b>7 builds</b><span>shown below</span></li>
+          <li><b>7 projects</b><span>selected work</span></li>
         </ul>
       </div>
 <pre aria-label="Example Luau code"><span class="k">local</span> Remote = ReplicatedStorage.Remotes.BuyItem
@@ -158,40 +158,53 @@ Remote.OnServerEvent:Connect(<span class="k">function</span>(player, itemId)
 
   <section id="works">
     <div class="wrap">
-      <h2>Things I've built</h2>
-      <p class="sub">These are my own projects, recorded in Studio. Tap a card to watch it run.</p>
+      <h2>Selected Work</h2>
+      <p class="sub">A selection of systems and projects I've built in Roblox Studio.</p>
       <div class="grid" id="grid"></div>
     </div>
   </section>
 
   <section id="stack">
     <div class="wrap">
-      <h2>What I like to build</h2>
-      <p class="sub">I write everything as modules, so a system can grow or be switched off without breaking the rest of your game.</p>
+      <h2>What I Build</h2>
+      <p class="sub">Modular systems designed to be easy to maintain, expand, and integrate into your game.</p>
       <div class="skills">
-        <div class="skill"><h3>Round-based games</h3><p>Round flow, voting, modifiers, spawns and win conditions.</p></div>
-        <div class="skill"><h3>Economy</h3><p>Currencies, shops, crates with weighted rolls, daily rewards and streaks.</p></div>
-        <div class="skill"><h3>Saving and data</h3><p>DataStore profiles, ordered leaderboards and protection against lost progress.</p></div>
-        <div class="skill"><h3>Tools and combat</h3><p>FPS shooters, tools, gloves, grapple hooks, cooldowns and hit detection.</p></div>
-        <div class="skill"><h3>Interfaces</h3><p>Inventories, stat boards and dialogue, wired to the server.</p></div>
-        <div class="skill"><h3>Security</h3><p>Server-side validation so nothing can be broken from the client.</p></div>
+        <div class="skill"><h3>Round Systems</h3><p>Round flow, voting, spawning, win conditions and modifiers.</p></div>
+        <div class="skill"><h3>Economy Systems</h3><p>Currencies, shops, crates, rewards and progression.</p></div>
+        <div class="skill"><h3>Data Systems</h3><p>Player profiles, saving, leaderboards and progression.</p></div>
+        <div class="skill"><h3>Gameplay Systems</h3><p>Tools, abilities, cooldowns, hit detection and gameplay interactions.</p></div>
+        <div class="skill"><h3>UI Systems</h3><p>Inventories, stat displays, dialogue and server-connected interfaces.</p></div>
+        <div class="skill"><h3>Security</h3><p>Server-side validation and protection against invalid client requests.</p></div>
       </div>
-      <p class="note">I don't take anticheat, vehicles or mechanics with complex geometry. A specialist will do those better than I would.</p>
+      
     </div>
   </section>
 
-  <section id="payment">
+  <section id="why">
     <div class="wrap">
-      <h2>How We'd Work Together</h2>
+      <h2>Why Work With Me</h2>
+      <p class="sub">Focused on clean, reliable systems that are built to fit your game.</p>
+      <div class="skills">
+        <div class="skill"><h3>Built for maintainability</h3><p>Modular code that can be expanded without rewriting the entire system.</p></div>
+        <div class="skill"><h3>Server-first architecture</h3><p>Important game logic and validation stay on the server.</p></div>
+        <div class="skill"><h3>Clear communication</h3><p>You get a walkthrough of the finished system before payment.</p></div>
+        <div class="skill"><h3>Focused on systems</h3><p>I specialize in the code that makes your Roblox game work.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <h2>How It Works</h2>
       <p class="sub">You only pay after you've seen the finished system, confirmed it works as expected, and are happy with the result.</p>
       <ol class="steps">
-        <li>You tell me what you need and I get started.</li>
-        <li>I build the system based on your requirements.</li>
-        <li>I send you a video walkthrough so you can review it.</li>
-        <li>You provide feedback and I make the requested adjustments.</li>
-        <li>Once you're satisfied, you pay for the completed work.</li>
-        <li>I send the .rbxl file or integrate the system directly into your place.</li>
-        <li>You test everything in-game, and I take care of any final fixes.</li>
+        <li><span><strong>Tell me what you need.</strong><br>Send me the requirements and any references.</span></li>
+        <li><span><strong>I build it.</strong><br>I develop the system based on your requirements.</span></li>
+        <li><span><strong>Review the result.</strong><br>I send you a walkthrough of the completed system.</span></li>
+        <li><span><strong>Request changes.</strong><br>You test it and give me feedback.</span></li>
+        <li><span><strong>Approve and pay.</strong><br>Once you're satisfied, you pay for the work.</span></li>
+        <li><span><strong>Delivery.</strong><br>I send the <code>.rbxl</code> or integrate the system into your game.</span></li>
+        <li><span><strong>Final testing.</strong><br>You test everything in-game and I handle any final fixes.</span></li>
       </ol>
     </div>
   </section>
@@ -202,11 +215,13 @@ Remote.OnServerEvent:Connect(<span class="k">function</span>(player, itemId)
       <p class="sub">Anything else, send me a message on Discord.</p>
       <div class="faq">
         <details><summary>What do you write in?</summary><p>Luau in Roblox Studio. The code is modular and the important checks live on the server.</p></details>
-        <details><summary>How long does it take?</summary><p>A small system takes one to three days. A bigger mechanic takes a week or more. I give you an estimate once I understand the task.</p></details>
+        <details><summary>How long does it take?</summary><p>Small systems can take a few days. Larger systems may take a week or longer. I give you an estimate after reviewing the requirements.</p></details>
         <details><summary>What do you need to start?</summary><p>A short description of what you want and any references. I'll reply with timing, a price and, if there is one, a simpler way to build it.</p></details>
+        <details><summary>Do you work with existing games?</summary><p>Yes. I can build new systems or work with existing code when the project is suitable.</p></details>
+        <details><summary>Can you work from a reference?</summary><p>Yes. Screenshots, videos and examples are helpful when explaining how you want something to work.</p></details>
         <details><summary>Do you sign NDAs?</summary><p>Yes. If you have your own template, send it over.</p></details>
         <details><summary>Do you work for revenue share?</summary><p>Usually I work on fixed payment. I'll look at revenue share case by case.</p></details>
-        <details><summary>What don't you take on?</summary><p>Anticheat, vehicles, and mechanics with complex geometry. FPS shooters are fine.</p></details>
+        <details><summary>What don't you take on?</summary><p>I currently don't take on anticheat, vehicle systems, or mechanics involving complex physics or geometry. FPS shooters are fine.</p></details>
       </div>
     </div>
   </section>
@@ -214,7 +229,7 @@ Remote.OnServerEvent:Connect(<span class="k">function</span>(player, itemId)
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Icon · Roblox scripter</span>
+    <span>© 2026 Icon · Roblox Developer</span>
     <span>Discord: iconx9912</span>
   </div>
 </footer>
