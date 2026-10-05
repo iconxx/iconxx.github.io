@@ -129,7 +129,7 @@ dialog video{display:block;width:100%;max-height:70vh;background:#000}
       <div>
         <p class="status">Taking commissions</p>
         <h1>Hi, I'm Icon. I build the <em>systems behind Roblox games</em></h1>
-        <p class="lede">4 years of experience with Luau. I build reliable, modular systems that are designed to be easy to maintain and expand.</p>
+        <p class="lede">I separate game logic into focused services and modules instead of putting everything into individual scripts.</p>
         <div class="actions">
           <a class="btn" href="#works">See my work</a>
           <a class="btn discord" href="https://discord.com/users/690302146524348436">Message on Discord</a>
@@ -140,18 +140,14 @@ dialog video{display:block;width:100%;max-height:70vh;background:#000}
           <li><b>7 projects</b><span>selected work</span></li>
         </ul>
       </div>
-<pre aria-label="Example Luau code"><span class="k">local</span> Remote = ReplicatedStorage.Remotes.BuyItem
+<pre aria-label="Example Luau code"><span class="k">local</span> ShopService = <span class="k">require</span>(ServerScriptService.Services.ShopService)
 
 Remote.OnServerEvent:Connect(<span class="k">function</span>(player, itemId)
-	<span class="k">local</span> item = Catalog[itemId]
-	<span class="k">if not</span> item <span class="k">then return end</span>
+	<span class="k">if not</span> ShopService:CanAfford(player, itemId) <span class="k">then</span>
+		<span class="k">return</span>
+	<span class="k">end</span>
 
-	<span class="k">local</span> data = Profiles[player]
-	<span class="k">if not</span> data <span class="k">or</span> data.Coins &lt; item.Price <span class="k">then return end</span>
-
-	data.Coins -= item.Price
-	table.insert(data.Inventory, itemId)
-	Remote:FireClient(player, <span class="s">"Purchased"</span>, itemId)
+	ShopService:Purchase(player, itemId)
 <span class="k">end</span>)</pre>
     </div>
   </div>
